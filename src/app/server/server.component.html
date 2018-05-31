@@ -1,4 +1,6 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add New Server</button>
-<p>
-  {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
-</p>
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add New Server</button>
+<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<p>{{ serverCreationStatus }}</p>
